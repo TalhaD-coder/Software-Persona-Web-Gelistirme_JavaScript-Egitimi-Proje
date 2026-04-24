@@ -1,1 +1,1 @@
-# Software-Persona-Web-Geli-tirme_JavaScript-E-itimi-Proje
+# Software-Persona-Web-Gelistirme_JavaScript-Egitimi-Proje
