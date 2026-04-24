@@ -130,7 +130,7 @@ Repo: [Software-Persona-Web-Gelistirme_JavaScript-Egitimi-Proje](https://github.
 
 ### Netlify
 
-Canlı Link: *(deploy sonrası buraya eklenecek)*
+Canlı Link: [https://candid-pavlova-fba2ac.netlify.app](https://candid-pavlova-fba2ac.netlify.app)
 
 Deploy adımları:
 1. `npm run build` çalıştır
