@@ -14,7 +14,7 @@ function TodoForm({ addTodo, updateTodo, editingTodo, cancelEdit, onNotify }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (date < today) {
+    if (!editingTodo && date < today) {
       const message = TODO_FORM.pastDateError;
       setDateError(message);
       onNotify?.(message, 'error');
@@ -55,7 +55,7 @@ function TodoForm({ addTodo, updateTodo, editingTodo, cancelEdit, onNotify }) {
           <input 
             type="date" 
             value={date}
-            min={today}
+            min={editingTodo ? undefined : today}
             onChange={(e) => {
               setDate(e.target.value);
               if (dateError) setDateError('');

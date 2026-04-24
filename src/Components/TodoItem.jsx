@@ -19,7 +19,7 @@ function TodoItem({ todo, onToggleComplete, onStartEdit, onDelete }) {
         </div>
         <div>
           <h3 className={`font-black text-xl transition-all ${todo.completed ? 'line-through text-slate-300' : 'text-slate-700'}`}>{todo.title}</h3>
-          <p className="text-[10px] font-black text-teal-600 bg-teal-50 px-2 py-0.5 rounded-md w-fit mt-1">📅 {new Date(todo.date).toLocaleDateString('tr-TR')}</p>
+          <p className="text-[10px] font-black text-teal-600 bg-teal-50 px-2 py-0.5 rounded-md w-fit mt-1">📅 {new Date(todo.date + 'T00:00:00').toLocaleDateString('tr-TR')}</p>
         </div>
       </div>
       <div className="flex items-center">

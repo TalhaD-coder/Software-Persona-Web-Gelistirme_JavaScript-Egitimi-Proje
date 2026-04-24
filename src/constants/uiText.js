@@ -1,11 +1,11 @@
 export const TODO_FORM = {
   maxTitleLength: 80,
-  pastDateError: 'Gecmis tarih secemezsin.',
+  pastDateError: 'Geçmiş tarih seçemezsin.',
 };
 
 export const TOAST_MESSAGES = {
-  addSuccess: 'Gorev basariyla eklendi.',
-  duplicateTaskError: 'Ayni gorev zaten listede var.',
-  updateSuccess: 'Gorev basariyla guncellendi.',
-  deleteSuccess: 'Gorev basariyla silindi.',
+  addSuccess: 'Görev başarıyla eklendi.',
+  duplicateTaskError: 'Aynı görev zaten listede var.',
+  updateSuccess: 'Görev başarıyla güncellendi.',
+  deleteSuccess: 'Görev başarıyla silindi.',
 };

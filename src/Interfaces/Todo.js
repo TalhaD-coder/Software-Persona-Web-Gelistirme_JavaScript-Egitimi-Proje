@@ -1,5 +1,5 @@
 export const createTodo = ({ title, date }) => ({
-  id: Date.now(),
+  id: crypto.randomUUID(),
   title: title.trim(),
   date,
   completed: false,

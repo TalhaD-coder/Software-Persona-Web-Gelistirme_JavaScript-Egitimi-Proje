@@ -62,13 +62,8 @@ function Home() {
   };
 
   const updateTodo = (id, title, date) => {
-    const normalizedUpdatedTitle = normalizeTitle(title);
-    const hasDuplicate = todos.some(
-      todo => todo.id !== id && normalizeTitle(todo.title) === normalizedUpdatedTitle
-    );
-
-    if (hasDuplicate) {
-      showToast(TOAST_MESSAGES.duplicateTaskError, 'error');
+    const currentTodo = todos.find(todo => todo.id === id);
+    if (!currentTodo) {
       return;
     }
 
@@ -76,6 +71,9 @@ function Home() {
       prev.map(todo => (todo.id === id ? { ...todo, title, date } : todo))
     );
     setEditingTodoId(null);
+    if (selectedDate && date !== selectedDate) {
+      setSelectedDate('');
+    }
     showToast(TOAST_MESSAGES.updateSuccess);
   };
 
@@ -183,7 +181,7 @@ function Home() {
                   onClick={() => setSelectedDate('')}
                   className="px-4 py-4 bg-slate-100 rounded-2xl font-bold text-slate-500 hover:bg-slate-200 transition-colors"
                 >
-                  Tum Tarihler
+                  Tüm Tarihler
                 </button>
               )}
             </div>
