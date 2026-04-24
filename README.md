@@ -1,74 +1,85 @@
-# Gorev Asistani - Todo Uygulamasi
+# Görev Asistanı
 
-Modern frontend gelistirme surecini gostermek icin React ile hazirlanmis, temiz mimariye sahip bir gorev yonetim uygulamasi.
+Modern frontend geliştirme sürecini göstermek için React ile hazırlanmış, temiz mimariye sahip bir görev yönetim uygulaması.
 
-## Icerik
+## İçerik
 
-- [Proje Ozeti](#proje-ozeti)
-- [Ozellikler](#ozellikler)
-- [Kullanilan Teknolojiler](#kullanilan-teknolojiler)
-- [Klasor Yapisi](#klasor-yapisi)
+- [Proje Özeti](#proje-özeti)
+- [Özellikler](#özellikler)
+- [Kullanılan Teknolojiler](#kullanılan-teknolojiler)
+- [Klasör Yapısı](#klasör-yapısı)
 - [Kurulum](#kurulum)
-- [Kullanim](#kullanim)
+- [Kullanım](#kullanım)
 - [Scripts](#scripts)
-- [Ekran Goruntuleri](#ekran-goruntuleri)
-- [Yayinlama](#yayinlama)
+- [Ekran Görüntüleri](#ekran-görüntüleri)
+- [Yayınlama](#yayınlama)
 
-## Proje Ozeti
+---
 
-Bu proje, staj teslimi kapsaminda istenen gereksinimleri karsilamak uzere gelistirilmistir:
+## Proje Özeti
 
-- Modern JavaScript kutuphanesi kullanimi (`React`)
-- CSS framework kullanimi (`Tailwind CSS`)
-- Duzenli klasor mimarisi (`Components`, `Pages`, `Interfaces`)
-- Tam CRUD akisinin uygulanmasi
+Bu proje, staj teslimi kapsamında istenen gereksinimleri karşılamak üzere geliştirilmiştir:
 
-## Ozellikler
+- Modern JavaScript kütüphanesi kullanımı (`React`)
+- CSS framework kullanımı (`Tailwind CSS`)
+- Düzenli klasör mimarisi (`Components`, `Pages`, `Interfaces`)
+- Tam CRUD akışının uygulanması
 
-- Gorev ekleme (baslik + tarih)
-- Gorev listeleme
-- Gorev guncelleme
-- Gorev silme
-- Tamamlandi / devam ediyor durumu degistirme
-- Arama ve durum filtreleme
-- Tarihe gore filtreleme
-- Ayni gorevi tekrar eklemeyi engelleme
-- Bos durum ekrani
-- Basari/hata toast bildirimleri
+---
 
-## Kullanilan Teknolojiler
+## Özellikler
 
-- `React`
-- `Vite`
-- `Tailwind CSS`
-- `Framer Motion`
-- `Lucide React`
-- `ESLint`
+- ✅ Görev ekleme (başlık + hedef tarih)
+- ✅ Görev listeleme
+- ✅ Görev güncelleme
+- ✅ Görev silme
+- ✅ Tamamlandı / devam ediyor durumu değiştirme
+- ✅ Arama ve durum filtreleme (Hepsi / Yap / Bitti)
+- ✅ Tarihe göre filtreleme
+- ✅ Aynı görevi tekrar eklemeyi engelleme
+- ✅ İlerleme yüzdesi göstergesi
+- ✅ Ses efektleri (açılıp kapatılabilir)
+- ✅ Başarı / hata toast bildirimleri
+- ✅ Boş durum ekranı
 
-## Klasor Yapisi
+---
+
+## Kullanılan Teknolojiler
+
+| Teknoloji | Açıklama |
+|-----------|----------|
+| [React 19](https://react.dev/) | UI kütüphanesi |
+| [Vite](https://vite.dev/) | Geliştirme ve build aracı |
+| [Tailwind CSS v4](https://tailwindcss.com/) | Utility-first CSS framework |
+| [Framer Motion](https://www.framer.com/motion/) | Animasyon kütüphanesi |
+| [Lucide React](https://lucide.dev/) | İkon kütüphanesi |
+| [ESLint](https://eslint.org/) | Kod kalite kontrolü |
+
+---
+
+## Klasör Yapısı
 
 ```text
-.
-├─ images/
-│  └─ .gitkeep
-├─ public/
-├─ src/
-│  ├─ Components/
-│  │  ├─ EmptyState.jsx
-│  │  ├─ Toast.jsx
-│  │  ├─ TodoForm.jsx
-│  │  └─ TodoItem.jsx
-│  ├─ Interfaces/
-│  │  └─ Todo.js
-│  ├─ Pages/
-│  │  └─ Home.jsx
-│  ├─ constants/
-│  │  └─ uiText.js
-│  ├─ App.jsx
-│  └─ main.jsx
-├─ package.json
-└─ README.md
+staj-projem/
+├─ images/                        # Ekran görüntüleri
+├─ public/                        # Statik dosyalar (ses, favicon)
+└─ src/
+   ├─ Components/
+   │  ├─ EmptyState.jsx            # Boş liste ekranı
+   │  ├─ Toast.jsx                 # Bildirim bileşeni
+   │  ├─ TodoForm.jsx              # Ekle / Güncelle formu
+   │  └─ TodoItem.jsx              # Tek görev satırı
+   ├─ Interfaces/
+   │  └─ Todo.js                   # createTodo fabrika fonksiyonu
+   ├─ Pages/
+   │  └─ Home.jsx                  # Ana sayfa, tüm state burada
+   ├─ constants/
+   │  └─ uiText.js                 # UI metinleri sabit dosyası
+   ├─ App.jsx
+   └─ main.jsx
 ```
+
+---
 
 ## Kurulum
 
@@ -76,34 +87,42 @@ Bu proje, staj teslimi kapsaminda istenen gereksinimleri karsilamak uzere gelist
 npm install
 ```
 
-## Kullanim
+## Kullanım
 
 ```bash
 npm run dev
 ```
 
-Ardindan tarayicida Vite'in verdigi adresi acin (genelde `http://localhost:5173`).
+Ardından tarayıcıda `http://localhost:5173` adresini açın.
 
 ## Scripts
 
-- `npm run dev` -> gelistirme ortami
-- `npm run build` -> production build
-- `npm run preview` -> build onizleme
-- `npm run lint` -> kod kalite kontrolu
+| Komut | Açıklama |
+|-------|----------|
+| `npm run dev` | Geliştirme ortamını başlatır |
+| `npm run build` | Production build alır |
+| `npm run preview` | Build önizlemesi yapar |
+| `npm run lint` | Kod kalite kontrolü çalıştırır |
 
-## Ekran Goruntuleri
+---
 
-Ekran goruntuleri `images/` klasorunde tutulur.
+## Ekran Görüntüleri
 
-Ornek kullanim:
+### Ana Ekran
+![Ana Ekran](./images/ana%20ekran.png)
 
-```md
-![Ana Ekran](./images/ana-ekran.png)
-```
+### Yap Filtresi
+![Yap Filtresi](./images/yap%20filtresi.png)
 
-> Ekran goruntulerini gonderdigin anda bu bolumu gercek dosya adlariyla dolduracagim.
+### Bitti Filtresi
+![Bitti Filtresi](./images/bitti%20filtresi.png)
 
-## Yayinlama
+### Tarih Filtresi ve Güncelleme
+![Tarih Filtresi ve Güncelleme](./images/tarih%20filtresi%20ve%20g%C3%BCncelleme.png)
+
+---
+
+## Yayınlama
 
 ### GitHub
 
@@ -111,6 +130,9 @@ Repo: [Software-Persona-Web-Gelistirme_JavaScript-Egitimi-Proje](https://github.
 
 ### Netlify
 
-1. `npm run build` calistir
-2. `dist/` klasorunu [Netlify Drop](https://app.netlify.com/drop) alanina birak
-3. Olusan canli linki README'ye ekle
+Canlı Link: *(deploy sonrası buraya eklenecek)*
+
+Deploy adımları:
+1. `npm run build` çalıştır
+2. Oluşan `dist/` klasörünü [Netlify Drop](https://app.netlify.com/drop) alanına sürükle
+3. Oluşan canlı linki buraya ekle
