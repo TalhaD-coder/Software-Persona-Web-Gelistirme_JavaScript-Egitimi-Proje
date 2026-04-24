@@ -1,92 +1,116 @@
-# Staj Todo Projesi
+# Gorev Asistani - Todo Uygulamasi
 
-Modern web gelistirme sureclerini pekistirmek icin React + Tailwind ile gelistirilmis bir Todo uygulamasidir.  
-Projede temiz klasor mimarisi, temel CRUD operasyonlari ve teslime uygun dokumantasyon hedeflenmistir.
+Modern frontend gelistirme surecini gostermek icin React ile hazirlanmis, temiz mimariye sahip bir gorev yonetim uygulamasi.
 
-## Proje Amaci
+## Icerik
 
-- Modern JavaScript kutuphanesi ile uygulama gelistirme deneyimi kazanmak
-- Component tabanli mimariyi dogru klasor yapisiyla uygulamak
-- CRUD (Ekle, Listele, Guncelle, Sil) operasyonlarini tek projede tamamlamak
-- Projeyi GitHub ve Netlify benzeri platformlara yayinlamaya hazir hale getirmek
+- [Proje Ozeti](#proje-ozeti)
+- [Ozellikler](#ozellikler)
+- [Kullanilan Teknolojiler](#kullanilan-teknolojiler)
+- [Klasor Yapisi](#klasor-yapisi)
+- [Kurulum](#kurulum)
+- [Kullanim](#kullanim)
+- [Scripts](#scripts)
+- [Ekran Goruntuleri](#ekran-goruntuleri)
+- [Yayinlama](#yayinlama)
+
+## Proje Ozeti
+
+Bu proje, staj teslimi kapsaminda istenen gereksinimleri karsilamak uzere gelistirilmistir:
+
+- Modern JavaScript kutuphanesi kullanimi (`React`)
+- CSS framework kullanimi (`Tailwind CSS`)
+- Duzenli klasor mimarisi (`Components`, `Pages`, `Interfaces`)
+- Tam CRUD akisinin uygulanmasi
+
+## Ozellikler
+
+- Gorev ekleme (baslik + tarih)
+- Gorev listeleme
+- Gorev guncelleme
+- Gorev silme
+- Tamamlandi / devam ediyor durumu degistirme
+- Arama ve durum filtreleme
+- Tarihe gore filtreleme
+- Ayni gorevi tekrar eklemeyi engelleme
+- Bos durum ekrani
+- Basari/hata toast bildirimleri
 
 ## Kullanilan Teknolojiler
 
-- `React` (arayuz ve component mimarisi)
-- `Vite` (hizli gelistirme ortami ve build)
-- `Tailwind CSS` (utility-first stil yapisi)
-- `Framer Motion` (mikro animasyonlar)
-- `Lucide React` (ikon seti)
-- `ESLint` (kod kalitesi ve hata yakalama)
-
-## Ozellikler (CRUD)
-
-- **Ekle:** Yeni gorev olusturma (baslik + tarih)
-- **Listele:** Tum gorevleri listeleme ve filtreleme
-- **Guncelle:** Mevcut gorevi duzenleme (baslik ve tarih)
-- **Sil:** Gorevi listeden kaldirma
-- **Durum Degistirme:** Tamamlandi / devam ediyor isaretleme
-- **Arama + Filtre:** Metin bazli arama ve durum filtreleri
-- **Bos Durum Ekrani:** Sonuc olmadiginda anlamli geri bildirim
+- `React`
+- `Vite`
+- `Tailwind CSS`
+- `Framer Motion`
+- `Lucide React`
+- `ESLint`
 
 ## Klasor Yapisi
 
 ```text
-src/
-  Components/
-    EmptyState.jsx
-    TodoForm.jsx
-    TodoItem.jsx
-  Interfaces/
-    Todo.js
-  Pages/
-    Home.jsx
-  App.jsx
-  main.jsx
+.
+├─ images/
+│  └─ .gitkeep
+├─ public/
+├─ src/
+│  ├─ Components/
+│  │  ├─ EmptyState.jsx
+│  │  ├─ Toast.jsx
+│  │  ├─ TodoForm.jsx
+│  │  └─ TodoItem.jsx
+│  ├─ Interfaces/
+│  │  └─ Todo.js
+│  ├─ Pages/
+│  │  └─ Home.jsx
+│  ├─ constants/
+│  │  └─ uiText.js
+│  ├─ App.jsx
+│  └─ main.jsx
+├─ package.json
+└─ README.md
 ```
 
-## Kurulum ve Calistirma
-
-1. Proje bagimliliklarini yukleyin:
-   ```bash
-   npm install
-   ```
-2. Gelistirme sunucusunu baslatin:
-   ```bash
-   npm run dev
-   ```
-3. Tarayicida acin:
-   - Vite tarafindan verilen yerel adres (genelde `http://localhost:5173`)
-
-## Kod Kalitesi Kontrolu
+## Kurulum
 
 ```bash
-npm run lint
+npm install
 ```
 
-## Build ve Yayinlama
-
-Uretim build'i almak icin:
+## Kullanim
 
 ```bash
-npm run build
+npm run dev
 ```
 
-Onizleme:
+Ardindan tarayicida Vite'in verdigi adresi acin (genelde `http://localhost:5173`).
 
-```bash
-npm run preview
+## Scripts
+
+- `npm run dev` -> gelistirme ortami
+- `npm run build` -> production build
+- `npm run preview` -> build onizleme
+- `npm run lint` -> kod kalite kontrolu
+
+## Ekran Goruntuleri
+
+Ekran goruntuleri `images/` klasorunde tutulur.
+
+Ornek kullanim:
+
+```md
+![Ana Ekran](./images/ana-ekran.png)
 ```
 
-Netlify benzeri platformlarda yayinlamak icin build cikti klasoru: `dist/`
+> Ekran goruntulerini gonderdigin anda bu bolumu gercek dosya adlariyla dolduracagim.
 
-## Teslim Kontrol Listesi
+## Yayinlama
 
-- [x] React tabanli proje
-- [x] Tailwind CSS kullanimi
-- [x] `Components`, `Pages`, `Interfaces` klasorleri
-- [x] CRUD operasyonlari
-- [x] Temiz kod ve lint kontrolu
-- [ ] En az 1 adet ekran goruntusu ekleme
-- [ ] GitHub public repo linki ekleme
-- [ ] Netlify (veya muadili) yayin linki ekleme
+### GitHub
+
+Repo: [Software-Persona-Web-Gelistirme_JavaScript-Egitimi-Proje](https://github.com/TalhaD-coder/Software-Persona-Web-Gelistirme_JavaScript-Egitimi-Proje)
+
+### Netlify
+
+1. `npm run build` calistir
+2. `dist/` klasorunu [Netlify Drop](https://app.netlify.com/drop) alanina birak
+3. Olusan canli linki README'ye ekle
